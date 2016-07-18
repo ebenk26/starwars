@@ -41,6 +41,7 @@ angular.module('starter.controllers', [])
   });
   $scope.submitItem = function () {
     // console.log(this.text);
+      $ionicLoading.show({template: 'Load Data...'});
       $http.get("http://swapi.co/api/"+this.text)
         .success(function(result) {
           // console.log(result);
