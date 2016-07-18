@@ -1,0 +1,94 @@
+<ion-view view-title="<img class='header-left' src='img/gojek.jpg'> Statistic <img class='header-right' src='img/starwars.jpg'>">
+  <ion-content class="padding">
+  Search Your Favourite Character On Starwars
+  <div class="list">
+  <form ng-submit="submitItem()">
+  <div class="item item-input-inset">
+    <label class="item-input-wrapper">
+      <span>http://swapi.co/api/</span>
+      <input type="text" placeholder="people/1/" name="text" ng-model="text">
+    </label>
+    <button class="button button-small" type="submit">
+      Submit
+    </button>
+  </div>
+  </form>
+</div>
+  <div class="list card">
+
+    <div class="item item-avatar">
+    <img src="img/account.png">
+    <h2>{{name}}</h2>
+    <p>{{gender}}</p>
+    </div>
+
+    <div class="item item-body">
+    <p class="item item-icon-left">
+      <i class="icon ion-calendar"></i>
+      Birth year : {{birth_year}}
+    </p>
+    <p class="item item-icon-left">
+      <i class="icon ion-eye"></i>
+      Eye Color : {{eye_color}}
+    </p>
+    <p class="item item-icon-left">
+      <i class="icon ion-stats-bars"></i>
+      Hair Color : {{hair_color}}
+    </p>
+    <p class="item item-icon-left">
+      <i class="icon ion-ios-body"></i>
+      Skin Color : {{skin_color}}
+    </p>
+    <p class="item item-icon-left">
+      <i class="icon ion-android-arrow-up"></i>
+      Height : {{height}}
+    </p>
+    <p class="item item-icon-left">
+      <i class="icon ion-earth"></i>
+      Homeworld : {{homeworld}}
+    </p>
+    <p class="item item-icon-left">
+      <i class="icon ion-stats-bars"></i>
+      Mass : {{mass}}
+    </p>
+    <p class="item item-icon-left">
+      <i class="icon ion-link"></i>
+      Url : {{url}}
+    </p>
+    <p class="item item-icon-left">
+      <i class="icon ion-android-film"></i>
+      Film : <br>
+      <span ng-repeat="film in films">
+        <span ng-click="detail('{{films[$index]}}')">{{films[$index]}}</span><br>
+      </span>
+    </p>
+    <p class="item item-icon-left">
+      <i class="icon ion-social-reddit"></i>
+      Species : <br>
+      <span ng-repeat="specs in species">
+        {{species[$index]}}<br>
+      </span>
+    </p>
+    <p class="item item-icon-left">
+      <i class="icon ion-jet"></i>
+      Starship : <br>
+      <span ng-repeat="starsh in starships">
+        {{starships[$index]}}<br>
+      </span>
+    </p>
+    <p class="item item-icon-left">
+      <i class="icon ion-stats-bars"></i>
+      Vehicles : <br>
+      <span ng-repeat="vehic in vehicles">
+        {{vehicles[$index]}}<br>
+      </span>
+    </p>
+    <p>
+      <a href="#" class="subdued"><i class="icon ion-ios-calendar"></i>&nbsp;&nbsp;Created : {{created | date: "dd-MM-yyyy HH:mm:ss"}}</a>
+      <a href="#" class="subdued"><i class="icon ion-ios-calendar"></i>&nbsp;&nbsp;Edited : {{edited | date: "dd-MM-yyyy HH:mm:ss"}}</a>
+    </p>
+    </div>
+
+  </div>
+  </ion-content>
+</ion-view>

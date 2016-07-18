@@ -1,0 +1,20 @@
+/* Empty. Add your own CSS if you like */
+.title, .bar.bar-stable {
+	background-color : #3bd03b; 
+}
+
+.bar-header {
+	background-color: pink; 
+}
+
+.header-right {
+	position: absolute;
+    right: 0;
+    width: 84px;
+}
+
+.header-left {
+	position: absolute;
+    left: 0;
+    width: 72px;
+}
